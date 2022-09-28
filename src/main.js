@@ -1,8 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
-
-Vue.config.productionTip = false
+import 'vue-search-select/dist/VueSearchSelect.css';
+import router from './router'
+import vuetify from './plugins/vuetify'
+import VueRouter from 'vue-router';
+    
+Vue.use(VueRouter);
 
 new Vue({
-  render: h => h(App),
+   router,
+   vuetify,
+   render: h => h(App)
 }).$mount('#app')
