@@ -3,7 +3,7 @@
     <div class="subpart">
       <div>
         <div><h3>Enter your details</h3></div>
-        <div>
+        <div class="infotext">
           <p>
             To create your account, we need to verify your identity. Your
             details are safe and we never share them.
@@ -166,6 +166,10 @@ Vue.use(VueCountryCode);
   flex-direction: column;
 }
 
+.infotext{
+  margin-top: 15px;
+}
+
 .header_section {
   display: flex;
   align-items: center;
@@ -202,8 +206,14 @@ Vue.use(VueCountryCode);
 
 .subpart {
   max-width: 50%;
+
+
 }
 
+.subpart h3{
+  font-size: 32px;
+  line-height: 38px;
+}
 .accountbutton {
   height: 50px;
   width: 480px;

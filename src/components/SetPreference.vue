@@ -5,7 +5,7 @@
                 <div>
                     <h3>Set your preferences</h3>
                 </div>
-                <div>
+                <div class="infotext">
                     <p>
                         Now, we’ll set up your account in the way that works best for you.
                         Then you’ll have access to expert advice if you need it.
@@ -13,18 +13,18 @@
                 </div>
             </div>
         </div>
-            <div>
+            <div class="countryselectheading">
                 <p>I transfer mostly</p>
             </div>
         
             <div class="userdetails">
-                <div class="userdetailsselect">
+                <div >
                     <p>From</p>
                     <vue-country-code class="userdetailsselect"
                      @onSelect="onSelect"></vue-country-code>
                 </div>
               
-                <div class="userdetailsselect">
+                <div>
                     <p>To</p>
                     <vue-country-code class="userdetailsselect"
                      @onSelect="onSelect"></vue-country-code>
@@ -40,12 +40,12 @@
 
 
 
-         <div>
+         <div class="amountselecttext">
             <p>In a year, I estimate I could transfer ...</p>
          </div>
-        <div class="userdetailsselect">
+        <div>
             <model-select :options="options"
-             class="userdetailsselect" 
+             class="userdetailsselect2" 
              v-model="item" placeholder="Select Amount">
             </model-select>
         </div>
@@ -113,50 +113,29 @@ export default {
   
   
 <style>
-.main {
+/* .main {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 1500px;
     flex-direction: column;
+} */
+
+.infotext{
+    margin-top: 15px;
 }
 
-.header_section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    margin-top: 60px;
-    box-shadow: 0px 0px 16px rgb(0 0 0 / 10%);
-    height: 100%;
-    min-height: 60px;
-    border-radius: 4px;
-    background-color: #ffffff;
-    /* background-image: url('http://ec2-34-249-94-64.eu-west-1.compute.amazonaws.com/images/tiered-alert.svg');  */
-    background-repeat: no-repeat;
-    background-position: 15px center;
-    border-left: 5px solid #fa4d56;
-    color: #626262;
-    font-family: "Times New Roman", Times, serif;
-    max-width: 100%;
-}
-
-
-
-.header_section_content {
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-}
-
-.header_section_content p {
+.amountselecttext{
+    margin-top: 18px;
     padding: 10px;
-    margin: 5px;
+    margin-right: 180px;
 }
 
-.subpart {
-    max-width: 50%;
+.countryselectheading{
+    display: flex;
+    justify-content: flex-start !important;
+    margin-right: 320px;
+    margin-top: 20px;
 }
 
 .accountbutton {
@@ -182,15 +161,6 @@ export default {
     width: 80%;
 }
 
-.userdetails select {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid rgb(233, 233, 233);
-    border-radius: 5px;
-    margin: 15px;
-    width: 80%;
-    height: 60%;
-}
 
 .userdetailsselect {
     width: 50%;
@@ -201,23 +171,20 @@ export default {
 .userdetails {
     display: flex;
     width: 450px;
+    margin-left: 23px;
 }
-
-.birthdetails {
-    display: flex;
-
-}
-
 
 .checkbox {
     display: flex;
     align-items: center;
-
+ 
     width: 480px;
+    margin-left: 35px;
 
 }
 
 .checkbox p {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
 }
 </style>
