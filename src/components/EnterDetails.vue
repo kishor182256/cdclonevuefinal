@@ -162,7 +162,7 @@ Vue.use(VueCountryCode);
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1500px;
+  /* max-width: 1500px; */
   flex-direction: column;
 }
 

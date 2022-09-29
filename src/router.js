@@ -7,6 +7,7 @@ import SelectAccount from './components/SelectAccount.vue'
 import SetSecurity from './components/SetSecurity.vue'
 import SetPreference from './components/SetPreference.vue'
 import Loading from './components/Loading.vue'
+import SignupComplete from './components/SignupComplete.vue'
 
 import Router from 'vue-router';
 
@@ -21,9 +22,8 @@ import Router from 'vue-router';
      {name:'SetSecurity', path: '/setsecurity', component: SetSecurity },
      {name:'SetPreference', path: '/setpreference', component: SetPreference },
      {name:'Loading', path: '/loading', component: Loading },
+     {name:'Complete', path: '/signupComplete', component: SignupComplete },
 
-
-    
    ]
    const router = new Router({
     mode: 'history',

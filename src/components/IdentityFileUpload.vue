@@ -23,6 +23,9 @@
             <div><p>organisation.<strong class="strongtext"> See our document requirements</strong></p></div>
         </div>
 
+        <PopUp/>
+
+
         <div>
             <div class="selectidentity">
                 <p>Proof of identity</p>
@@ -115,31 +118,29 @@
 </template>
   
 <script>
+   
+import PopUp from './PopUp.vue';
     export default {
-      data() {
+    data() {
         return {
             chooseOption: null,
             chooseOption1: null,
-            adress:{
-                proof:'',
-                identity:''
+            adress: {
+                proof: "",
+                identity: ""
             },
-            document:['Billing Utility','Bank Statement'],
-            identity:['PassPort','Driving Licence']
-         
+            document: ["Billing Utility", "Bank Statement"],
+            identity: ["PassPort", "Driving Licence"]
         };
-
-      },
-
-      methods: {
-        goToHome(){
-            console.log('redirectTo');
-            this.$router.push({name:'CreateLogin'})
+    },
+    methods: {
+        goToHome() {
+            console.log("redirectTo");
+            this.$router.push({ name: "Complete" });
         }
-      }
-
-     
-    };
+    },
+    components: { PopUp }
+};
     </script>
     
 
@@ -290,6 +291,12 @@
 
 .footertext{
     margin-right: 310px;
+    
 
+}
+
+.footertext p{
+    
+color:#0b5fff !important;
 }
 </style>
