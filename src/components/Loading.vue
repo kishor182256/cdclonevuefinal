@@ -2,11 +2,12 @@
   <div class="main">
      <v-app class="circular">
         <div class="circular"><v-progress-circular 
-        :rotate="90"
+        :rotate="10"
         :size="200"
         :width="5"
         :value="value"
         color="#0b5fff"
+        indeterminate
       >
         <div class="circularcontent">
           <div class="circularcontenttext">
@@ -48,10 +49,11 @@ Vue.use(Vuetify)
   mounted () {
     this.interval = setInterval(() => {
       if (this.value === 100) {
-        return (this.value = 0)
+        this.$router.push({ name: 'Complete' })      
+          return (this.value = 0)
       }
       this.value += 10
-    }, 1000)
+    }, 500)
   },
 
     }

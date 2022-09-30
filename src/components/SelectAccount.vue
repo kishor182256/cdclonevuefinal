@@ -4,7 +4,10 @@
     <div class="main">
         <h1>I’d like to send money as:</h1>
         <div class="imagesection">
-            <div class="imagesectionmain">
+            <div
+             @click="changeBorders()"
+             :style="showborder? 'border: 1px solid #0b5fff;' : 'border: 1px solid white;'"
+             class="imagesectionmain">
                 <div class="imagesectionimage">
                     <img 
                     src="http://ec2-34-249-94-64.eu-west-1.compute.amazonaws.com/whitelabel/CurrenciesDirectBlue/images/icon-profile.svg" />
@@ -15,7 +18,10 @@
                 </div>
             </div>
 
-            <div class="imagesectionmain">
+            <div 
+            @click="changeBordersone()"
+            :style="showborderone? 'border: 1px solid #0b5fff;' : 'border: 1px solid white;'"
+            class="imagesectionmain">
                 <div class="imagesectionimage">
                     <img 
                     src="http://ec2-34-249-94-64.eu-west-1.compute.amazonaws.com/images/icon-company.svg" />
@@ -27,8 +33,12 @@
             </div>
 
 
-            <div class="imagesectionmain">
-                <div class="imagesectionimage">
+            <div
+            @click="changeBorderstwo()"
+             :style="showbordertwo? 'border: 1px solid #0b5fff;' : 'border: 1px solid white;'"
+             class="imagesectionmain">
+                <div
+                 class="imagesectionimage">
                     <img 
                     src="http://ec2-34-249-94-64.eu-west-1.compute.amazonaws.com/whitelabel/CurrenciesDirectBlue/images/icon-online-seller.svg" />
                      <p>An Individual</p>
@@ -52,11 +62,35 @@
 <script>
 export default {
     name: 'CreateLogin',
+    data(){
+     return{
+        showborder: false,
+        showborderone: false,
+        showbordertwo: false
+     }
+    },
     methods: {
         goToHome() {
             console.log('redirectTo');
             this.$router.push({ name: 'CreateLogin' })
-        }
+        },
+        changeBorders() {
+            this.showborder= true;
+            this.showborderone= false,
+            this.showbordertwo=false
+        },
+
+        changeBordersone() {
+            this.showborder= false;
+            this.showborderone= true,
+            this.showbordertwo=false
+        },
+        changeBorderstwo() {
+            this.showborder= false;
+            this.showborderone= false,
+            this.showbordertwo=true
+        },
+
     }
 }
 </script>
@@ -88,7 +122,12 @@ export default {
     flex-direction: column;
     margin-top: 60px;
     margin-bottom: 30px;
+    cursor: pointer;
 
+}
+
+.imagesection input{
+    cursor: pointer;
 }
 
 
@@ -129,5 +168,9 @@ export default {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: bolder;
+}
+
+.newborder{
+    border: 1px solid #f03ea6;
 }
 </style>
