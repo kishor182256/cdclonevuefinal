@@ -22,32 +22,40 @@
         </div>
 
         <div class="fontpassword">
-          <input v-if="showPassword" type="text" class="input" v-model="password" if="passwordValidation.valid"
-            placeholder="Password" />
-          <input v-else type="password" if="passwordValidation.valid" class="input" v-model="password"
-            placeholder="Password" />
+          <input v-if="showPassword"
+           type="text" class="input"
+            v-model="password"
+          
+             placeholder="Password"/>
 
+          <input v-else type="password" class="input" v-model="password" placeholder="Password" />
+          
           <i @click="toggleShow" class="fas fontpassword"
             :class="{ 'fa-eye-slash': showPassword, 'fa-eye': !showPassword }"></i>
         </div>
+       
 
         <div class="passwordvalidationdiv">
           <p>Your password must contain:</p>
           <div class="passwordvalidation">
             <div class="circle">
-              <i class="fa fa-genderless faiccon"></i>
+              <i class="fa fa-genderless faiccon" v-if=!password.match(/.{8,}/) > </i>
+              <i class="fa fa-circle-check faiccons" v-if=password.match(/.{8,}/) > </i>
               <p class="passwordvalidationlable">at least 8 characters</p>
             </div>
             <div class="circle">
-              <i class="fa fa-genderless faiccon"></i>
+              <i class="fa fa-genderless faiccon" v-if=!password.match(/[0-9]/)></i>
+              <i class="fa fa-circle-check faiccons" v-if=password.match(/[0-9]/)></i>
               <p class="passwordvalidationlable">at least 1 number</p>
             </div>
             <div class="circle">
-              <i class="fa fa-genderless faiccon"></i>
+              <i class="fa fa-genderless faiccon" v-if=!password.match(/[a-z]/)></i>
+              <i class="fa fa-circle-check faiccons" v-if=password.match(/[a-z]/)></i>
               <p class="passwordvalidationlable">a lower case character</p>
             </div>
             <div class="circle">
-              <i class="fa fa-genderless faiccon"></i>
+              <i class="fa fa-genderless faiccon" v-if=!password.match(/[A-Z]/)></i>
+              <i class="fa-solid fa-circle-check faiccons" v-if=password.match(/[A-Z]/)></i>
               <p class="passwordvalidationlable">a upper case character</p>
             </div>
           </div>
@@ -77,7 +85,7 @@
 
 
     <div v-if="websiteAccept">
-      <p class="para">Please enter your referral code, or the name of the person who referred you.</p>
+      <p class="para2">Please enter your referral code, or the name of the person who referred you.</p>
       <input type="text" class="inputfieldtoggle" placeholder="Enter Code" />
     </div>
 
@@ -88,7 +96,12 @@
 </template>
   
 <script>
+
+
 export default {
+
+
+
   data() {
     return {
       websiteAccept: null,
@@ -113,7 +126,11 @@ export default {
     Redirect() {
       console.log('redirectTo');
       this.$router.push({ name: 'SetSecurity' })
-    }
+    },
+
+
+
+    
 
 
   },
@@ -133,12 +150,29 @@ export default {
 }
 
 .main h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Circular-Medium,Arial,Helvetica,sans-serif';
   margin-left: 10px;
+  font-size: 32px;
 }
 
-.main input{
+.main input {
   background-color: #ffffff;
+  border: 1px solid #f2f2f2 !important;
+}
+
+input::placeholder {
+  color: #626262;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Circular-Book,Arial,Helvetica,sans-serif';
+}
+
+input:focus {
+  border: none !important;
+}
+
+.faiccons{
+  color:green !important;
 }
 
 
@@ -166,13 +200,14 @@ export default {
   margin: 15px;
 }
 
-.referheadingdiv{
+.referheadingdiv {
   /* margin-left: 100px; */
 }
 
-.referheadingdiv h3{
+.referheadingdiv h3 {
   font-size: 16px !important;
   margin-bottom: 2px;
+  font-family: Circular-Bold;
 }
 
 .accountbutton {
@@ -212,12 +247,12 @@ export default {
 
 .radiobutton {
   display: flex;
-  margin-right:170px;
+  margin-right: 170px;
 }
 
- .radiobutton label {
-   margin-left: 5px;
- }
+.radiobutton label {
+  margin-left: 5px;
+}
 
 .radiobuttonlabel {
   display: flex;
@@ -236,7 +271,14 @@ export default {
 
 .para {
   margin-left: 18px;
-  max-width: 400px
+  max-width: 400px;
+  font-family: 'Circular-Book,Arial,Helvetica,sans-serif';
+}
+
+.para2 {
+  margin-left: 10px;
+  max-width: 400px;
+  font-family: 'Circular-Book,Arial,Helvetica,sans-serif';
 }
 
 .passwordvalidation {
@@ -253,11 +295,14 @@ export default {
 
 .passwordvalidationdiv {
   margin-left: 18px;
+  font-family: 'Circular-Medium,Arial,Helvetica,sans-serif';
+
 }
 
 .faiccon {
   font-size: 25px;
   font-weight: 100;
+  color: gray !important;
 }
 
 .passwordvalidationlable {

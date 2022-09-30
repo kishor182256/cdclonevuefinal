@@ -13,39 +13,37 @@
                 </div>
             </div>
         </div>
-            <div class="countryselectheading">
-                <p>I transfer mostly</p>
-            </div>
-        
-            <div class="userdetails">
-                <div >
-                    <p>From</p>
-                    <vue-country-code class="userdetailsselect"
-                     @onSelect="onSelect"></vue-country-code>
-                </div>
-              
-                <div>
-                    <p>To</p>
-                    <vue-country-code class="userdetailsselect"
-                     @onSelect="onSelect"></vue-country-code>
-                </div>
+        <div class="countryselectheading">
+            <p>I transfer mostly</p>
+        </div>
+
+        <div class="userdetails">
+            <div>
+                <p>From</p>
+                <vue-country-code class="userdetailsselect" @onSelect="onSelect"></vue-country-code>
             </div>
 
+            <div>
+                <p>To</p>
+                <vue-country-code class="userdetailsselect" @onSelect="onSelect"></vue-country-code>
+            </div>
+        </div>
 
 
 
 
 
-        
 
 
 
-         <div class="amountselecttext">
+
+
+        <div class="amountselecttext">
             <p>In a year, I estimate I could transfer ...</p>
-         </div>
+        </div>
         <div>
-            <model-select :options="options"
-             class="userdetailsselect2" 
+            <model-select :options="options" 
+            class="userdetailsselect2"
              v-model="item" placeholder="Select Amount">
             </model-select>
         </div>
@@ -97,13 +95,13 @@ export default {
         onSelect({ name, iso2, dialCode }) {
             console.log(name, iso2, dialCode);
         },
-       
-           
-            redirectTo() {
-                console.log('redirectTo');
-                this.$router.push({ name: 'Loading' })
-            }
-      
+
+
+        redirectTo() {
+            console.log('redirectTo');
+            this.$router.push({ name: 'Loading' })
+        }
+
     },
     components: {
         ModelSelect
@@ -113,29 +111,28 @@ export default {
   
   
 <style>
-/* .main {
+ .main {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 1500px;
     flex-direction: column;
-} */
+} 
 
-.infotext{
-    margin-top: 15px;
-}
+.infotext {}
 
-.amountselecttext{
-    margin-top: 18px;
-    padding: 10px;
+.amountselecttext {
+
+    margin-top: 20px;
     margin-right: 180px;
+    margin-left: 20px;
 }
 
-.countryselectheading{
+.countryselectheading {
     display: flex;
     justify-content: flex-start !important;
     margin-right: 320px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .accountbutton {
@@ -165,6 +162,14 @@ export default {
 .userdetailsselect {
     width: 50%;
     height: 50px;
+    margin: 3px;
+
+}
+
+.userdetailsselect2 {
+    height: 50px;
+    width: 250% !important;
+
 
 }
 
@@ -177,7 +182,7 @@ export default {
 .checkbox {
     display: flex;
     align-items: center;
- 
+
     width: 480px;
     margin-left: 35px;
 
@@ -186,5 +191,9 @@ export default {
 .checkbox p {
     margin-top: 20px;
     margin-left: 10px;
+}
+
+.subpart {
+    margin-right: 50px;
 }
 </style>

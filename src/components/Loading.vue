@@ -89,8 +89,10 @@ Vue.use(Vuetify)
   }
 
   .circularcontenttext p{
-    color:#03122c !important;
-    font-size: 16px !important;
+    color:#003060 !important;
+    font-size: 22px !important;
+    font-family:'Circular-Book,Arial,Helvetica,sans-serif';
+    margin: -5px;
   }
 
   .progressvalue{
@@ -108,5 +110,9 @@ Vue.use(Vuetify)
   }
   .footertext p{
     color: #6f6f6f !important;
+    font-Size:22px;
+    font-family:'Circular-Book,Arial,Helvetica,sans-serif';
+    font-weight: 300;
+    margin: -3px;
   }
 </style>

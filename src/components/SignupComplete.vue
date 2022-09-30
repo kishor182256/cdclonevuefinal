@@ -51,11 +51,15 @@
 .main h3 {
    font-size: 32px;
    line-height: 38px;
+   font-Weight:medium;
+   font-Size:36px;
+   font-family: Helvetica, Roboto, Arial, sans-serif;
 }
 
 .main p{
    line-height: 1.6;
-   color:#626262;
+   color:#6f6f6f;
+   font-family: Circular-Book,Arial,Helvetica,sans-serif;
 }
 
 .imagediv {
@@ -64,6 +68,7 @@
    padding: 10px;
    border-radius: 5px;
    margin-top: 40px;
+   box-shadow: 0px 0px 20px rgb(0 0 0 / 8%);
 }
 .imagedivright{
    display: flex;
@@ -74,7 +79,7 @@
 }
 
 .imagedivright h1{
-   font-size: 14px;
+   font-size: 16px;
    margin-left: 10px;
    font-family:'Circular Medium', sans-serif;
    font-weight: 400;
@@ -82,8 +87,10 @@
 
 .imagedivright p{
    font-size: 14px ! important ;
-   font-family:'Circular Medium', sans-serif;
+   font-family:'Circular Book', sans-serif;
    font-weight: lighter;
+   margin-left: 10px ! important;
+    color: #626262;
 }
 
 .imageplaystore{

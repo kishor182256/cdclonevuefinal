@@ -23,11 +23,11 @@
         </div>
       </div>
       <div class="userdetails">
-        <div class="userdetailsselect">
+        <div>
 
           <vue-country-code class="userdetailsselect" @onSelect="onSelect"></vue-country-code>
         </div>
-        <div>
+        <div class="userdetailsinput">
           <input type="text" name="number" class="input-container" placeholder="Mobile Number" />
         </div>
       </div>
@@ -62,6 +62,8 @@ export default {
   max-width: 1500px;
   flex-direction: column;
 }
+
+
 
 .header_section {
   display: flex;
@@ -107,10 +109,16 @@ export default {
 .userdetails {
   display: flex;
   margin-top: 20px;
+  align-items: center;
 }
 
-.userdetails input{
+.userdetails input {
   background-color: #ffffff;
+  
+}
+
+.userdetailsinput{
+  height: -22px;
 }
 
 .accountbutton {
@@ -150,6 +158,7 @@ export default {
   width: 200px !important;
   margin-top: 10px;
   background-color: #ffffff !important;
+
 }
 </style>
   
