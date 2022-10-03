@@ -55,7 +55,7 @@
             </div>
             <div class="circle">
               <i class="fa fa-genderless faiccon" v-if=!password.match(/[A-Z]/)></i>
-              <i class="fa-solid fa-check faiccons" v-if=password.match(/[A-Z]/)></i>
+              <i class="fa fa-check faiccons" v-if=password.match(/[A-Z]/)></i>
               <p class="passwordvalidationlable">a upper case character</p>
             </div>
           </div>

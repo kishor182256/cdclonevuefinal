@@ -4,7 +4,7 @@ import 'vue-search-select/dist/VueSearchSelect.css';
 import router from './router'
 import vuetify from './plugins/vuetify'
 import VueRouter from 'vue-router';
-import './font.css'
+import './font.scss'
 
 
     

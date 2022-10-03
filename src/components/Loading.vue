@@ -49,7 +49,7 @@ Vue.use(Vuetify)
   mounted () {
     this.interval = setInterval(() => {
       if (this.value === 100) {
-        this.$router.push({ name: 'Complete' })      
+        this.$router.push({ name: 'IdentityFileUpload' })      
           return (this.value = 0)
       }
       this.value += 10

@@ -41,7 +41,7 @@
         <div class="amountselecttext">
             <p>In a year, I estimate I could transfer ...</p>
         </div>
-        <div>
+        <div class="amountselect">
             <model-select :options="options" 
             class="userdetailsselect2"
              v-model="item" placeholder="Select Amount">
@@ -191,6 +191,12 @@ export default {
 .checkbox p {
     margin-top: 20px;
     margin-left: 10px;
+}
+
+.amountselect{
+    width: 180px;
+    margin-right: 250px;
+    margin-top: 10px;
 }
 
 .subpart {
