@@ -18,7 +18,6 @@ export default {
       </div>
        <div class="stepper">
         
-      <div class="subheadercontent">
         <div class="subheadercontentstep">
           <div class="number">1
           </div>
@@ -26,10 +25,8 @@ export default {
             <p>Account</p>
           </div>
         </div>
-      </div>
 
 
-      <div class="subheadercontent">
         <div class="subheadercontentstep">
           <div class="number">2
           </div>
@@ -37,20 +34,16 @@ export default {
             <p>Security</p>
           </div>
         </div>
-      </div>
 
 
-      <div class="subheadercontent">
         <div class="subheadercontentstep">
           <div class="number">3
           </div>
           <div>
-            <p>Account</p>
+            <p>Preference</p>
           </div>
         </div>
-      </div>
 
-      <div class="subheadercontent">
         <div class="subheadercontentstep">
           <div class="number">
             4
@@ -59,9 +52,7 @@ export default {
             <p>Details</p>
           </div>
         </div>
-      </div>
 
-      <div class="subheadercontent">
         <div class="subheadercontentstep">
           <div class="number">5
           </div>
@@ -69,7 +60,6 @@ export default {
             <p>Identity</p>
           </div>
         </div>
-      </div>
 
     </div>
 
@@ -89,12 +79,14 @@ export default {
 .header {
   background-color: #ffffff;
   height: 100px;
-
 }
 
 .subheader {
   display: flex;
   justify-content: space-between;
+  height: 100px;
+  align-items: center;
+
 
 }
 
@@ -103,9 +95,9 @@ export default {
 }
 
 .subheadercontent img {
-  height: 60px;
+  height:32px;
   width: 160px;
-  margin-bottom: 160px !important;
+
 }
 
 .subheadercontent2 {
@@ -116,7 +108,7 @@ export default {
 }
 
 .subheadercontentstep p {
-  margin: 5px;
+  margin: 10px;
 }
 
 .crossicon {
@@ -127,10 +119,14 @@ export default {
 
 .subheadercontentstep {
   display: flex;
-  justify-content: space-evenly !important;
+  justify-content: space-between !important;
   align-items: center !important;
-  max-width: 100px;
+  max-width: 400px;
+  margin: 10px;
+}
 
+.subheadercontentstep p{
+  margin-right: 10px;
 }
 
 .divider {
@@ -140,7 +136,8 @@ export default {
 .stepper{
   max-width: 200px;
   display: flex !important;
-  margin-right: 800px;
+  /* margin-right: 800px */
+  justify-content: center;
 }
 
  .number{
@@ -152,8 +149,8 @@ export default {
   justify-content: center !important;
   align-items: center !important;
   color:#ffffff !important;
-   font: 5px;
-   font-weight: bold;
+  font: 5px;
+  font-weight: bold;
  }
 
  .number p{
