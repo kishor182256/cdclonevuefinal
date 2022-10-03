@@ -150,7 +150,7 @@ export default {
 }
 
 .main h1 {
-  font-family: 'Circular-Medium,Arial,Helvetica,sans-serif';
+  font-family: Circular-Medium,Arial,Helvetica,sans-serif;
   margin-left: 10px;
   font-size: 32px;
 }

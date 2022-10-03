@@ -34,7 +34,7 @@ export default {
 <style>
 .footer {
     background-color: #ffffff;
-    height: 110px;
+    height: 80px;
     display: flex;
     margin-top: 50px;
 }
@@ -42,7 +42,7 @@ export default {
 .footersubdiv {
     display: flex;
     align-items: center;
-    margin-right: 40px !important;
+    margin-left: 30px;
 }
 
 .footercontent{
@@ -54,7 +54,10 @@ export default {
 
 .footercontent p{
     font-family: Circular-Book,Arial,Helvetica,sans-serif;
-    font-size: 100;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: #6f6f6f;
+
 
 }
 

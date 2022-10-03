@@ -21,7 +21,7 @@ export default {
         <div class="subheadercontentstep">
           <div class="number">1
           </div>
-          <div>
+          <div class="step">
             <p>Account</p>
           </div>
         </div>
@@ -30,7 +30,7 @@ export default {
         <div class="subheadercontentstep">
           <div class="number">2
           </div>
-          <div>
+          <div class="step">
             <p>Security</p>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default {
         <div class="subheadercontentstep">
           <div class="number">3
           </div>
-          <div>
+          <div class="step">
             <p>Preference</p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default {
           <div class="number">
             4
           </div>
-          <div>
+          <div class="step">
             <p>Details</p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default {
         <div class="subheadercontentstep">
           <div class="number">5
           </div>
-          <div>
+          <div class="step">
             <p>Identity</p>
           </div>
         </div>
@@ -78,13 +78,13 @@ export default {
 <style>
 .header {
   background-color: #ffffff;
-  height: 100px;
+  height: 60px;
 }
 
 .subheader {
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: 60px;
   align-items: center;
 
 
@@ -95,9 +95,8 @@ export default {
 }
 
 .subheadercontent img {
-  height:32px;
+  height:52px;
   width: 160px;
-
 }
 
 .subheadercontent2 {
@@ -153,7 +152,10 @@ export default {
   font-weight: bold;
  }
 
- .number p{
+ .step p{
    display: flex;
- }
+   font-family: Circular-Book,Arial,Helvetica,sans-serif; 
+   color:#0a0a0a;
+   font-weight: 200;
+ } 
 </style>
