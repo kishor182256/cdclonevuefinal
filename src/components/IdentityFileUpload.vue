@@ -2,10 +2,10 @@
     <div class="main">
         <div class="headingdiv">
             <div>
-                <h3>One last thing...</h3>
+                <h3 class="headingdiv_heading">One last thing...</h3>
             </div>
             <div>
-                <p>Just so we know it’s really you, please provide:</p>
+                <p class="headingpara">Just so we know it’s really you, please provide:</p>
             </div>
         </div>
 
@@ -31,12 +31,18 @@
                 <p>Proof of identity</p>
             </div>
             <div class="selectdiv">
-                <select class="select" v-model="adress.identity">
+                <!-- <select class="select" v-model="adress.identity">
                     <option >Select Document Type</option>
                     <option
                      v-for="identity in identity" value="adress.identity"
                      :key="identity">{{identity}}</option>
                     
+                </select> -->
+
+                <select class="select"  v-model="adress.identity">
+                    <option value="">Select Document Type</option>
+                    <option v-for=" identity in  identity"
+                     :key="identity" value='"adress.identity"'>{{identity}}</option>   
                 </select>
             </div>
         </div>
@@ -68,8 +74,8 @@
                 <div class="selectdiv">
                 <select class="select" v-model="adress.proof">
                     <option value="">Select Document Type</option>
-                    <option v-for=" document in  document" :key="document" value='document'>{{document}}</option>
-                   
+                    <option v-for=" document in  document" :key="document"
+                     value='document'>{{document}}</option>   
                 </select>
             </div>
             </div>
@@ -82,7 +88,7 @@
             <div v-if="adress.proof=== 'document'">
                 <div class="uploadidentity2">
                     <div>
-                        <div>
+                        <div class="uploadidentity2para">
                             <p v-if="adress.proof=== 'document.passport'">Upload a file of the of your PassPort.Must be less than 3 months old</p>
                             <p>Upload a file of the of your PassPort.Must be less than 3 months old</p>
                         </div>
@@ -97,7 +103,7 @@
             </div>
         </div>
 
-        <div>
+        <div class='buttondiv'>
             <Button v-on:click.native="goToHome()">Submit Documents</Button>
         </div>
 
@@ -160,20 +166,25 @@ import Button from './Button.vue';
 
 .headingdiv p{
     color:#757575;
-    line-height: 1.3rem;
-    font-size: 16px;
-    font-weight: 600;
+    line-height: 1.3;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 10px !important;
+    font-family: Circular-Medium,Arial,Helvetica,sans-serif !important;
+
 }
 
-.headingdiv h3{
-    font-family: 'Circular-Medium,Arial,Helvetica,sans-serif';
+.headingdiv_heading{
+    font-family: Circular-Medium,Arial,Helvetica,sans-serif;
     color: #121212;
     font-size: 28px;
     letter-spacing: 0!important;
+    margin-right: 90px !important;
 }
 
+
 .subtext{
-    margin-right: 120px;
+    margin-right: 80px;
     padding: 20px;
     font-family: 'Circular-Book,Arial,Helvetica,sans-serif';
     font-family: 400;
@@ -260,6 +271,14 @@ import Button from './Button.vue';
     padding: 15px;
 }
 
+.uploadidentity2para{
+    margin-left: 20px !important;
+}
+
+
+/* .buttondiv{
+    margin-bottom: 60px !important;
+} */
 
 
 
@@ -267,22 +286,30 @@ import Button from './Button.vue';
 .footerinfo{
     max-width: 400px;
     margin: 20px;
-    margin-right: 90px;
-   
+    margin-right: 90px; 
+}
+
+.footerinfo p{
+    margin-left: 15px !important;
 }
 
 .footerinfo h3{
     margin-bottom: 10px;
+    margin-right: 30px !important;
 }
 
 .footertext{
-    margin-right: 310px;
-    
+    margin-right:640px; 
+    display: flex !important;
+    justify-content: flex-start !important;
+    place-items: start !important;
 
 }
 
 .footertext p{
-    
+    display: flex !important;
+    justify-content: flex-start !important;
+    place-items: start !important;
 color:#0b5fff !important;
 }
 </style>

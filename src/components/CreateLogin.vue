@@ -7,62 +7,10 @@
         entering your email address and a memorable password
       </p>
     </div>
-
     <div class="inputfield">
+      <LoginInput   :password='password'/>
       <div>
-        <input type="text" name="name" placeholder="First and middle names" /><br />
-      </div>
-      <div>
-        <input type="text" name="lastname" placeholder="Last name" />
-      </div>
-
-      <div>
-        <div>
-          <input type="email" name="email" placeholder="Email Adress" />
-        </div>
-
-        <div class="fontpassword">
-          <input v-if="showPassword"
-           type="text" class="input"
-            v-model="password"
-          
-             placeholder="Password"/>
-
-          <input v-else type="password" class="input" v-model="password" placeholder="Password" />
-          
-          <i @click="toggleShow" class="fas fontpassword"
-            :class="{ 'fa-eye-slash': showPassword, 'fa-eye': !showPassword }"></i>
-        </div>
-       
-
-        <div class="passwordvalidationdiv">
-          <p>Your password must contain:</p>
-          <div class="passwordvalidation">
-            <div class="circle">
-              <i class="fa fa-genderless faiccon" v-if=!password.match(/.{8,}/) > </i>
-              <i class="fa fa-check faiccons" v-if=password.match(/.{8,}/) > </i>
-              <p class="passwordvalidationlable">at least 8 characters</p>
-            </div>
-            <div class="circle">
-              <i class="fa fa-genderless faiccon" v-if=!password.match(/[0-9]/)></i>
-              <i class="fa fa-check faiccons" v-if=password.match(/[0-9]/)></i>
-              <p class="passwordvalidationlable">at least 1 number</p>
-            </div>
-            <div class="circle">
-              <i class="fa fa-genderless faiccon" v-if=!password.match(/[a-z]/)></i>
-              <i class="fa fa-check faiccons" v-if=password.match(/[a-z]/)></i>
-              <p class="passwordvalidationlable">a lower case character</p>
-            </div>
-            <div class="circle">
-              <i class="fa fa-genderless faiccon" v-if=!password.match(/[A-Z]/)></i>
-              <i class="fa fa-check faiccons" v-if=password.match(/[A-Z]/)></i>
-              <p class="passwordvalidationlable">a upper case character</p>
-            </div>
-          </div>
-        </div>
-
-        <!--  -->
-
+        <!-- <PasswordValidation  :password='password' :showPassword='showPassword'/> -->
       </div>
     </div>
     <div class="referheadingdiv">
@@ -72,13 +20,13 @@
 
       <div class="radiobuttonlabel">
         <div><input type="radio" name="radio" :value="false" v-model="websiteAccept" /></div>
-        <label >No</label>
+        <label>No</label>
       </div>
       <div class="radiobuttonlabelno">
         <div class="radiobuttonlabel"><input type="radio" name="radio" :value="true" v-model="websiteAccept" />
           <label>Yes</label>
         </div>
-        
+
       </div>
 
     </div>
@@ -92,7 +40,7 @@
     </div>
 
     <div>
-      <Button v-on:click.native="Redirect()"/>
+      <Button v-on:click.native="Redirect()" />
     </div>
   </div>
 </template>
@@ -100,34 +48,26 @@
 <script>
 
 import Button from './Button.vue';
+import LoginInput from '../components/component/LoginInput.vue';
+// import PasswordValidation from '../components/component/PasswordValidation.vue';
 
 export default {
-
-
-  components:{
-    Button
-},
+  components: {
+    Button,
+    LoginInput,
+    // PasswordValidation
+  },
   data() {
     return {
       websiteAccept: null,
       password: "",
-      checkPassword: "",
-      passwordVisible: false,
-      submitted: false,
-      showPassword: false,
     };
 
   },
 
-  computed: {
-    buttonLabel() {
-      return this.showPassword ? "Hide" : "Show";
-    },
-  },
+  
   methods: {
-    toggleShow() {
-      this.showPassword = !this.showPassword;
-    },
+    
     Redirect() {
       console.log('redirectTo');
       this.$router.push({ name: 'SetSecurity' })
@@ -135,7 +75,7 @@ export default {
 
 
 
-    
+
 
 
   },
@@ -155,7 +95,7 @@ export default {
 }
 
 .main h3 {
-  font-family: Circular-Medium,Arial,Helvetica,sans-serif !important;
+  font-family: Circular-Medium, Arial, Helvetica, sans-serif !important;
   margin-left: 15px;
   font-size: 32px !important;
   margin-left: 15px;
@@ -177,50 +117,24 @@ input:focus {
   border: none !important;
 }
 
-.faiccons{
-  color:#00aa5e !important;
-  border:1px solid #00aa5e;
-  border-radius:50%;
- padding: 0.5px;
-font-weight: 100;
-  background-color: #ffffff;
-}
 
 
 
 
 
-
-.inputfield {
-  padding: 10px;
-}
-
-.inputfield input {
-  width: 400px;
-  padding: 20px;
-  border: 1px solid rgb(233, 233, 233);
-  border-radius: 5px;
-  margin: 15px;
-}
-
-.inputfield input::placeholder{
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  color:#626262;
-  font-size: 14px;
-  font-weight: 400 !important;
-}
 
 .inputfieldtoggle {
-  width: 400px;
+  width: 450px;
   padding: 20px;
   border: 1px solid rgb(233, 233, 233);
   border-radius: 5px;
-  margin: 15px;
+  margin: 10px;
+  margin-left: 30px !important;
 }
 
-.inputfieldtoggle::placeholder{
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  color:#626262;
+.inputfieldtoggle::placeholder {
+  font-family: Circular-Book, Arial, Helvetica, sans-serif;
+  color: #626262;
   font-size: 14px;
   font-weight: 400 !important;
 }
@@ -268,8 +182,8 @@ font-weight: 100;
 }
 
 .radiobuttonlabel label {
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-;
+  font-family: Circular-Book, Arial, Helvetica, sans-serif;
+  ;
 }
 
 
@@ -282,7 +196,7 @@ font-weight: 100;
 }
 
 .radiobuttonlabelno label {
-   margin-bottom: 1px;
+  margin-bottom: 1px;
 }
 
 .referheading {
@@ -297,7 +211,7 @@ font-weight: 100;
 }
 
 .para2 {
-  margin-left: 10px;
+  margin-left: 35px;
   max-width: 400px;
   font-family: 'Circular-Book,Arial,Helvetica,sans-serif';
 }
@@ -312,16 +226,6 @@ font-weight: 100;
 
   display: flex;
   align-items: center;
-}
-
-.passwordvalidationdiv {
-  margin-left: 18px;
-}
-
-.passwordvalidationdiv p{
-  font-family: 'Circular-Medium,Arial,Helvetica,sans-serif';
-  margin-bottom: 10px;
-
 }
 
 .faiccon {

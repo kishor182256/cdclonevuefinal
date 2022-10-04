@@ -104,7 +104,7 @@ Vue.use(Vuetify)
     flex-direction: column;
     align-items: center !important;
     justify-content: center !important;
-    margin-left: 290px;
+    margin-left: 450px;
     margin-top: 20px;
     color: #6f6f6f !important;
   }

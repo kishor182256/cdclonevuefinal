@@ -20,12 +20,12 @@
         <div class="userdetails">
             <div>
                 <p>From</p>
-                <vue-country-code class="userdetailsselect" @onSelect="onSelect"></vue-country-code>
+                <DropDownFlag/>
             </div>
 
             <div>
                 <p>To</p>
-                <vue-country-code class="userdetailsselect" @onSelect="onSelect"></vue-country-code>
+                <DropDownFlag/>
             </div>
         </div>
 
@@ -72,14 +72,16 @@ import Vue from "vue";
 import VueCountryCode from "vue-country-code-select";
 import { ModelSelect } from 'vue-search-select'
 import Button from "./Button.vue";
+import DropDownFlag from "./DropDownFlag.vue";
 
 
 
 Vue.use(VueCountryCode);
 export default {
+   
     name: "SetPreference",
-    data() {
-        return {
+    data(){
+    return {
             options: [
                 { value: '1', text: 'Under 2000' },
                 { value: '2', text: '2000-5000' },
@@ -104,7 +106,8 @@ export default {
     },
     components: {
     ModelSelect,
-    Button
+    Button,
+    DropDownFlag
 }
 };
 </script>
@@ -123,7 +126,7 @@ export default {
 .subpartheading {
     font-family: Circular-Book,Arial,Helvetica,sans-serif !important;
     font-size: 32px;
-    margin-left: 200px;
+    margin-left: -5px !important;
 
 }
 

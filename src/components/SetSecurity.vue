@@ -24,8 +24,7 @@
       </div>
       <div class="userdetails">
         <div>
-          <vue-country-code class="userdetailsselect" @onSelect="onSelect"></vue-country-code>
-        </div>
+          <DropDownFlag/>        </div>
         <div class="userdetailsinput">
           <input type="text" name="number" class="input-container" placeholder="Mobile Number" />
         </div>
@@ -41,11 +40,13 @@
   
 <script>
 import Button from './Button.vue';
+import DropDownFlag from './DropDownFlag.vue';
 
 export default {
   name: "SetupSecurity",
   components:{
-    Button
+    Button,
+    DropDownFlag
 },
   methods: {
     Redirect() {
@@ -67,24 +68,7 @@ export default {
 
 
 
-/* .header_section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  margin-top: 60px;
-  box-shadow: 0px 0px 16px rgb(0 0 0 / 10%);
-  height: 100%;
-  min-height: 60px;
-  border-radius: 4px;
-  background-color: #ffffff;
-  /* background-image: url('http://ec2-34-249-94-64.eu-west-1.compute.amazonaws.com/images/tiered-alert.svg');  */
-  /*background-repeat: no-repeat;
-  background-position: 15px center;
-  border-left: 5px solid #fa4d56;
-  color: #626262;
-  max-width: 100%;
-} */
+
 
 .headings{
   font-family: Circular-Book,Arial,Helvetica,sans-serif;
@@ -153,11 +137,7 @@ export default {
   height: 60%;
 }
 
-.userdetailsselect {
-  width: 200px !important;
-  margin-top: 10px;
-  background-color: #ffffff !important;
-}
+
 
 .headerpara{
   font-family: Circular-Book,Arial,Helvetica,sans-serif;
