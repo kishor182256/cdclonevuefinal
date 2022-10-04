@@ -3,7 +3,7 @@
         <div class="subpart">
             <div>
                 <div>
-                    <h3>Set your preferences</h3>
+                    <h3 class="subpartheading">Set your preferences</h3>
                 </div>
                 <div class="infotext">
                     <p>
@@ -61,9 +61,8 @@
 
 
         <div>
-            <button type="button" name="save" @click="redirectTo()" value="Save" class="accountbutton">
-                Continue
-            </button>
+           
+            <Button  v-on:click.native="redirectTo()" >Continue</Button>
         </div>
     </div>
 </template>
@@ -72,13 +71,13 @@
 import Vue from "vue";
 import VueCountryCode from "vue-country-code-select";
 import { ModelSelect } from 'vue-search-select'
+import Button from "./Button.vue";
 
 
 
 Vue.use(VueCountryCode);
 export default {
     name: "SetPreference",
-
     data() {
         return {
             options: [
@@ -104,8 +103,9 @@ export default {
 
     },
     components: {
-        ModelSelect
-    }
+    ModelSelect,
+    Button
+}
 };
 </script>
   
@@ -117,9 +117,15 @@ export default {
     align-items: center;
     max-width: 1500px;
     flex-direction: column;
+    margin-bottom: 200px !important;
 } 
 
-.infotext {}
+.subpartheading {
+    font-family: Circular-Book,Arial,Helvetica,sans-serif !important;
+    font-size: 32px;
+    margin-left: 200px;
+
+}
 
 .amountselecttext {
 
@@ -135,19 +141,9 @@ export default {
     margin-top: 5px;
 }
 
-.accountbutton {
-    height: 50px;
-    width: 480px;
-    border-radius: 25px;
-    border: none;
-    color: #ffffff;
-    background: linear-gradient(95deg, #f03ea6 4.1%, #ff6b00 95.1%, #f03ea6 200%);
-    margin-top: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: bolder;
-    opacity: 0.8;
-}
+
+
+
 
 .input-container {
     width: 400px;

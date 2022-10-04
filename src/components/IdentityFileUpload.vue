@@ -98,11 +98,7 @@
         </div>
 
         <div>
-            <button type="button" name="save"
-             @click="goToHome()"
-             value="Save" class="accountbutton">
-                Submit Documents
-            </button>
+            <Button v-on:click.native="goToHome()">Submit Documents</Button>
         </div>
 
         <div class="footerinfo">
@@ -119,8 +115,12 @@
   
 <script>
    
-import PopUp from './PopUp.vue';
+import Button from './Button.vue';
+
     export default {
+        components:{
+    Button
+},
     data() {
         return {
             chooseOption: null,
@@ -139,7 +139,6 @@ import PopUp from './PopUp.vue';
             this.$router.push({ name: "Complete" });
         }
     },
-    components: { PopUp }
 };
     </script>
     
@@ -264,19 +263,6 @@ import PopUp from './PopUp.vue';
 
 
 
-.accountbutton {
-    height: 50px;
-    width: 480px;
-    border-radius: 25px;
-    border: none;
-    color: #ffffff;
-    background: linear-gradient(95deg, #f03ea6 4.1%, #ff6b00 95.1%, #f03ea6 200%);
-    margin-top: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: bolder;
-    opacity: 0.8;
-}
 
 .footerinfo{
     max-width: 400px;

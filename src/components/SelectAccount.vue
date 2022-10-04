@@ -2,7 +2,7 @@
 
 
     <div class="main">
-        <h1>I’d like to send money as:</h1>
+        <h4>I’d like to send money as:</h4>
         <div class="imagesection">
             <div
              @click="changeBorders()"
@@ -25,7 +25,7 @@
                 <div class="imagesectionimage">
                     <img 
                     src="http://ec2-34-249-94-64.eu-west-1.compute.amazonaws.com/images/icon-company.svg" />
-                     <p>An Individual</p>
+                     <p>A Bussiness</p>
                 </div>
                 <div>
                     <input type="radio"/>
@@ -41,7 +41,7 @@
                  class="imagesectionimage">
                     <img 
                     src="http://ec2-34-249-94-64.eu-west-1.compute.amazonaws.com/whitelabel/CurrenciesDirectBlue/images/icon-online-seller.svg" />
-                     <p>An Individual</p>
+                     <p>A OnlineSeller</p>
                 </div>
                 <div>
                     <input type="radio"/>
@@ -50,9 +50,10 @@
         </div>
 
 
-        <button type="button" name="save" value="Save" @click="goToHome()" class="accountbutton">
-            Continue
-        </button>
+       
+
+        <Button  v-on:click.native="goToHome()"/>
+
 
 
     </div>
@@ -60,8 +61,12 @@
 
 
 <script>
+import Button from './Button.vue';
 export default {
-    name: 'CreateLogin',
+    name: 'SelectAccount',
+    components:{
+    Button
+},
     data(){
      return{
         showborder: false,
@@ -111,8 +116,9 @@ export default {
     margin-top: 100px;
 }
 
-.main h1 {
-    font-family: Arial, Helvetica, sans-serif;
+.main h4 {
+    font-family: Circular-Medium,Arial,Helvetica,sans-serif !important;
+    font-size: 32px !important;
 }
 
 .imagesection{
@@ -120,15 +126,13 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-bottom: 30px;
     cursor: pointer;
 
 }
 
-.imagesection input{
-    cursor: pointer;
-}
+
 
 
 .imagesectionmain {
@@ -148,6 +152,9 @@ export default {
 
 .imagesectionimage p{
     margin-left: 10px;
+    color:#131415 !important;
+    background-size: 28px !important;
+    font-weight: 500;
 }
 
 
@@ -157,20 +164,7 @@ export default {
 
 
 
-.accountbutton {
-    height: 50px;
-    width: 480px;
-    border-radius: 25px;
-    border: none;
-    color: #ffffff;
-    background: linear-gradient(95deg, #f03ea6 4.1%, #ff6b00 95.1%, #f03ea6 200%);
-    margin-top: 80px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: bolder;
-}
 
-.newborder{
-    border: 1px solid #f03ea6;
-}
+
+
 </style>

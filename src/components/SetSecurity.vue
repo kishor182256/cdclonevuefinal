@@ -6,14 +6,14 @@
           <img src="http://ec2-34-249-94-64.eu-west-1.compute.amazonaws.com/images/tiered-alert.svg" />
         </div>
         <div>
-          <p>Please enter a valid mobile number so we can send your PIN.</p>
+          <p class="headerpara">Please enter a valid mobile number so we can send your PIN.</p>
         </div>
       </div>
     </div>
     <div class="subpart">
       <div>
         <div>
-          <h3>Set up your security</h3>
+          <h3 class="headings">Set up your security</h3>
         </div>
         <div class="subparttext">
           <p>
@@ -24,7 +24,6 @@
       </div>
       <div class="userdetails">
         <div>
-
           <vue-country-code class="userdetailsselect" @onSelect="onSelect"></vue-country-code>
         </div>
         <div class="userdetailsinput">
@@ -34,17 +33,20 @@
     </div>
 
     <div>
-      <button type="button" name="save" @click="Redirect()" value="Save" class="accountbutton">
-        Continue
-      </button>
+      
+      <Button  v-on:click.native="Redirect()"/>
     </div>
   </div>
 </template>
   
 <script>
+import Button from './Button.vue';
 
 export default {
   name: "SetupSecurity",
+  components:{
+    Button
+},
   methods: {
     Redirect() {
       console.log('redirectTo');
@@ -65,7 +67,7 @@ export default {
 
 
 
-.header_section {
+/* .header_section {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,12 +79,16 @@ export default {
   border-radius: 4px;
   background-color: #ffffff;
   /* background-image: url('http://ec2-34-249-94-64.eu-west-1.compute.amazonaws.com/images/tiered-alert.svg');  */
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;
   background-position: 15px center;
   border-left: 5px solid #fa4d56;
   color: #626262;
-  font-family: "Times New Roman", Times, serif;
   max-width: 100%;
+} */
+
+.headings{
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-weight: 300;
 }
 
 .header_section_content {
@@ -103,7 +109,12 @@ export default {
 }
 
 .subparttext {
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.subparttext p{
+
 }
 
 .userdetails {
@@ -121,19 +132,7 @@ export default {
   height: -22px;
 }
 
-.accountbutton {
-  height: 50px;
-  width: 480px;
-  border-radius: 25px;
-  border: none;
-  color: #ffffff;
-  background: linear-gradient(95deg, #f03ea6 4.1%, #ff6b00 95.1%, #f03ea6 200%);
-  margin-top: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: bolder;
-  opacity: 0.8;
-}
+
 
 .input-container {
   width: 400px;
@@ -158,7 +157,11 @@ export default {
   width: 200px !important;
   margin-top: 10px;
   background-color: #ffffff !important;
+}
 
+.headerpara{
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-size: 14px;
 }
 </style>
   

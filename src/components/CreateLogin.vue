@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div>
-      <h1>Create your login</h1>
+      <h3>Create your login</h3>
       <p class="para">
         It only takes a couple of minutes to create an account. Get started by
         entering your email address and a memorable password
@@ -72,11 +72,13 @@
 
       <div class="radiobuttonlabel">
         <div><input type="radio" name="radio" :value="false" v-model="websiteAccept" /></div>
-        <label class="radiobuttonlabel">No</label>
+        <label >No</label>
       </div>
       <div class="radiobuttonlabelno">
-        <div class="radiobuttonlabel"><input type="radio" name="radio" :value="true" v-model="websiteAccept" /></div>
-        <label class="radiobuttonlabel">Yes</label>
+        <div class="radiobuttonlabel"><input type="radio" name="radio" :value="true" v-model="websiteAccept" />
+          <label>Yes</label>
+        </div>
+        
       </div>
 
     </div>
@@ -89,19 +91,22 @@
       <input type="text" class="inputfieldtoggle" placeholder="Enter Code" />
     </div>
 
-    <div><button type="button" @click="Redirect()" name="save" value="Save" class="accountbutton">
-        Continue
-      </button></div>
+    <div>
+      <Button v-on:click.native="Redirect()"/>
+    </div>
   </div>
 </template>
   
 <script>
 
+import Button from './Button.vue';
 
 export default {
 
 
-
+  components:{
+    Button
+},
   data() {
     return {
       websiteAccept: null,
@@ -149,10 +154,11 @@ export default {
 
 }
 
-.main h1 {
-  font-family: Circular-Medium,Arial,Helvetica,sans-serif;
-  margin-left: 10px;
-  font-size: 32px;
+.main h3 {
+  font-family: Circular-Medium,Arial,Helvetica,sans-serif !important;
+  margin-left: 15px;
+  font-size: 32px !important;
+  margin-left: 15px;
 }
 
 .main input {
@@ -197,6 +203,13 @@ font-weight: 100;
   margin: 15px;
 }
 
+.inputfield input::placeholder{
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  color:#626262;
+  font-size: 14px;
+  font-weight: 400 !important;
+}
+
 .inputfieldtoggle {
   width: 400px;
   padding: 20px;
@@ -205,8 +218,11 @@ font-weight: 100;
   margin: 15px;
 }
 
-.referheadingdiv {
-  /* margin-left: 100px; */
+.inputfieldtoggle::placeholder{
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  color:#626262;
+  font-size: 14px;
+  font-weight: 400 !important;
 }
 
 .referheadingdiv h3 {
@@ -215,19 +231,7 @@ font-weight: 100;
   font-family: Circular-Bold;
 }
 
-.accountbutton {
-  height: 50px;
-  width: 480px;
-  border-radius: 25px;
-  border: none;
-  color: #ffffff;
-  background: linear-gradient(95deg, #f03ea6 4.1%, #ff6b00 95.1%, #f03ea6 200%);
-  margin-top: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: bolder;
-  opacity: 0.8;
-}
+
 
 .toggle {
   height: 30px;
@@ -261,13 +265,24 @@ font-weight: 100;
 
 .radiobuttonlabel {
   display: flex;
-
 }
+
+.radiobuttonlabel label {
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+;
+}
+
+
 
 .radiobuttonlabelno {
   display: flex;
   justify-content: space-between;
   margin-left: 160px;
+  align-items: center;
+}
+
+.radiobuttonlabelno label {
+   margin-bottom: 1px;
 }
 
 .referheading {
@@ -276,6 +291,7 @@ font-weight: 100;
 
 .para {
   margin-left: 18px;
+  margin-top: 10px;
   max-width: 400px;
   font-family: 'Circular-Book,Arial,Helvetica,sans-serif';
 }
@@ -300,7 +316,11 @@ font-weight: 100;
 
 .passwordvalidationdiv {
   margin-left: 18px;
+}
+
+.passwordvalidationdiv p{
   font-family: 'Circular-Medium,Arial,Helvetica,sans-serif';
+  margin-bottom: 10px;
 
 }
 
