@@ -51,7 +51,7 @@ export default {
   methods: {
     Redirect() {
       console.log('redirectTo');
-      this.$router.push({ name: 'SetPreference' })
+      this.$router.push({ name: 'EnterDetails' })
     }
   }
 };

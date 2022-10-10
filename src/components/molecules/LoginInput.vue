@@ -1,5 +1,6 @@
 <script>
 import PasswordValidation from "./PasswordValidation.vue";
+import CommonInputField from "../atoms/CommonInputField.vue";
 export default {
     name: "LoginInput",
    
@@ -7,6 +8,7 @@ export default {
         return {
             showPassword: false,
             password:'',
+
             props: {
                 // password: String,
             },
@@ -22,7 +24,7 @@ export default {
             this.showPassword = !this.showPassword;
         },
     },
-    components: { PasswordValidation }
+    components: { PasswordValidation, CommonInputField }
 }
 </script>
   
@@ -30,21 +32,21 @@ export default {
 <template>
     <div class="inputfield">
         <div>
-            <input type="text" name="name" placeholder="First and middle names" /><br />
+            <CommonInputField Value="text" name="name" placeholder="First and middle names" /><br />
         </div>
         <div>
-            <input type="text" name="lastname" placeholder="Last name" />
+            <CommonInputField Value="text" name="lastname" placeholder="Last name" />
         </div>
 
         <div>
             <div>
-                <input type="email" name="email" placeholder="Email Adress" />
+                <CommonInputField Value="email" name="email" placeholder="Email Adress" />
             </div>
 
             <div class="fontpassword">
-                <input v-if="showPassword" type="text" class="input" v-model="password" placeholder="Password" />
+                <CommonInputField v-if="showPassword" Value="text" class="input" v-model="password" placeholder="Password" />
 
-                <input v-else type="password" class="input" v-model="password" placeholder="Password" />
+                <CommonInputField v-else Value="password" class="input" v-model="password" placeholder="Password" />
 
                 <i @click="toggleShow" class="fas fontpassword"
                     :class="{ 'fa-eye-slash': showPassword, 'fa-eye': !showPassword }"></i>

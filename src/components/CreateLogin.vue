@@ -18,7 +18,7 @@
     <div class="radiobutton">
 
       <div class="radiobuttonlabel">
-        <div><input type="radio" name="radio" :value="false" v-model="websiteAccept" /></div>
+        <div><CommonInputRadioButton type="radio" name="radio" :value="false" v-model="websiteAccept" /></div>
         <label>No</label>
       </div>
       <div class="radiobuttonlabelno">
