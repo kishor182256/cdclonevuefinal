@@ -17,7 +17,7 @@
         </div>
       </div>
       <div>
-        <CommonInputField
+        <InputField
           Value="number"
           class="input-container"
           placeholder="Start Typing your Adress Here"
@@ -27,7 +27,7 @@
         <p>Enter address manually</p>
       </div>
       <div>
-        <CommonInputField
+        <InputField
         Value="text"
           name="number"
           class="input-container"
@@ -35,7 +35,7 @@
         />
       </div>
       <div>
-        <CommonInputField
+        <InputField
         Value="text"
           name="number"
           class="input-container"
@@ -43,7 +43,7 @@
         />
       </div>
       <div>
-        <CommonInputField
+        <InputField
         Value="text"
           name="number"
           class="input-container"
@@ -51,7 +51,7 @@
         />
       </div>
       <div>
-        <CommonInputField
+        <InputField
         Value="text"
           name="number"
           class="input-container"
@@ -64,7 +64,7 @@
     <div class="birthdetails" >
       
       <div >
-        <CommonInputField
+        <InputField
         Value="text"
           name="number"
           class="input-container"
@@ -72,7 +72,7 @@
         />
       </div>
       <div>
-        <CommonInputField
+        <InputField
          Value="text"
           name="number"
           class="input-container"
@@ -80,7 +80,7 @@
         />
       </div>
       <div>
-        <CommonInputField
+        <InputField
           Value="text"
           name="number"
           class="input-container"
@@ -121,7 +121,7 @@
    import Vue from "vue";
    import VueCountryCode from "vue-country-code-select";
    import { ModelSelect } from 'vue-search-select'
-   import CommonInputField from "../atoms/CommonInputField.vue";
+   import InputField from "../atoms/InputField.vue";
    import '../styles/EnterDetails.css'
 
 
@@ -153,7 +153,7 @@ Vue.use(VueCountryCode);
     },
     components: {
     ModelSelect,
-    CommonInputField
+    InputField
 }
 };
 </script>

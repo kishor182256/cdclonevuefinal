@@ -18,11 +18,11 @@
     <div class="radiobutton">
 
       <div class="radiobuttonlabel">
-        <div><CommonInputField type="radio" name="radio" :value="false" v-model="websiteAccept" /></div>
+        <div><input type="radio" name="radio" :value="false" v-model="websiteAccept" /></div>
         <label>No</label>
       </div>
       <div class="radiobuttonlabelno">
-        <div class="radiobuttonlabel"><CommonInputField type="radio" name="radio" :value="true" v-model="websiteAccept" />
+        <div class="radiobuttonlabel"><input type="radio" name="radio" :value="true" v-model="websiteAccept" />
           <label>Yes</label>
         </div>
 
@@ -52,14 +52,14 @@
 
 import LoginInput from "../molecules/LoginInput.vue";
 import Button from "../atoms/Button.vue";
-import CommonInputField from "../atoms/CommonInputField.vue";
+// import CommonInputField from "../atoms/CommonInputField.vue";
 import '../styles/CreateLogin.css'
 
 export default {
   components: {
     LoginInput,
     Button,
-    CommonInputField
+    // CommonInputField
 },
   data() {
     return {
