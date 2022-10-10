@@ -17,16 +17,19 @@
 
 import Vue from "vue";
 import VueCountryCode from "vue-country-code-select";
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
+import Header from "./components/organism/Header.vue";
+import Footer from "./components/organism/Footer.vue";
+
 
 
 Vue.use(VueCountryCode);
 export default {
   name: 'App',
   components: {
-    Header,Footer
-  }
+    Header,
+    Footer,
+    
+}
 }
 </script>
 

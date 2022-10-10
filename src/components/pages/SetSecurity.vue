@@ -33,20 +33,21 @@
 
     <div>
       
-      <Button  v-on:click.native="Redirect()"/>
+     <Button  v-on:click.native="Redirect()"/> 
+      
     </div>
   </div>
 </template>
   
 <script>
-import Button from "./components/atoms/Button.vue";
-import DropDownFlag from './atoms/DropDownFlag.vue';
+import DropDownFlag from '../atoms/DropDownFlag.vue';
+import Button from '../atoms/Button.vue';
+
 
 export default {
   name: "SetupSecurity",
   components:{
-    Button,
-    DropDownFlag
+    DropDownFlag,Button
 },
   methods: {
     Redirect() {

@@ -1,13 +1,13 @@
 
 
 import EnterDetails from './components/EnterDetails.vue'
-import CreateLogin from './components/CreateLogin.vue';
-import IdentityFileUpload from './components/IdentityFileUpload.vue'
-import SelectAccount from './components/SelectAccount.vue'
-import SetSecurity from './components/SetSecurity.vue'
-import SetPreference from './components/SetPreference.vue'
-import Loading from './components/Loading.vue'
-import SignupComplete from './components/SignupComplete.vue'
+import CreateLogin from "./components/pages/CreateLogin.vue";
+import IdentityFileUpload from "./components/pages/IdentityFileUpload.vue";
+import SelectAccount from "./components/pages/SelectAccount.vue";
+import SetSecurity from "./components/pages/SetSecurity.vue";
+import SetPreference from "./components/pages/SetPreference.vue";
+import Loading from "./components/pages/Loading.vue";
+import SignupComplete from './components/pages/SignupComplete.vue'
 
 import Router from 'vue-router';
 

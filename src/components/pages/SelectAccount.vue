@@ -61,7 +61,7 @@
 
 
 <script>
-import Button from "./components/atoms/Button.vue";
+import Button from '../atoms/Button.vue';
 export default {
     name: 'SelectAccount',
     components:{

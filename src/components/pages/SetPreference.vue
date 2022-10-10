@@ -71,9 +71,8 @@
 import Vue from "vue";
 import VueCountryCode from "vue-country-code-select";
 import { ModelSelect } from 'vue-search-select'
-import Button from '.components/atoms/Button.vue';
-import DropDownFlag from "./atoms/DropDownFlag.vue";
-
+import Button from '../atoms/Button.vue';
+import DropDownFlag from "../atoms/DropDownFlag.vue";
 
 
 

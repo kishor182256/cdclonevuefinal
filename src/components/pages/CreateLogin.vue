@@ -8,7 +8,7 @@
       </p>
     </div>
     <div class="inputfield">
-      <LoginInput :password='password'/>
+      <LoginInput   :password='password'/>
       <div>
       </div>
     </div>
@@ -39,22 +39,21 @@
     </div>
 
     <div>
-      <Button v-on:click.native="Redirect()" />
+    <Button v-on:click.native="Redirect()" />
     </div>
   </div>
 </template>
   
 <script>
 
-
-
-import LoginInput from "./components/molecules/LoginInput.vue";
-import Button from "./components/atoms/Button.vue";
+// import Button from './components/atoms/Button.vue';
+import Button from '../atoms/Button.vue';
+import LoginInput from '../molecules/LoginInput.vue';
 
 export default {
   components: {
     LoginInput,
-    Button
+    Button,
 },
   data() {
     return {
