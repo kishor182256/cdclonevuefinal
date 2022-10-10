@@ -121,7 +121,8 @@
   
 <script>
    
-   import Button from '../atoms/Button.vue';
+   import Button from "../atoms/Button.vue";
+
     export default {
         components:{
     Button

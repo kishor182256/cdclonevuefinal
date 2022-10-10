@@ -1,6 +1,6 @@
 
 
-import EnterDetails from './components/EnterDetails.vue'
+import EnterDetails from './components/pages/EnterDetails.vue'
 import CreateLogin from "./components/pages/CreateLogin.vue";
 import IdentityFileUpload from "./components/pages/IdentityFileUpload.vue";
 import SelectAccount from "./components/pages/SelectAccount.vue";

@@ -1,14 +1,17 @@
 <script>
     export default {
-
+       name:"Button",
+       props: {
+         buttonLabel: String
+       },
     }
 </script>
 
 
 <template>
 
-<button type="button" name="save" value="Save"  class="accountbutton">
-            Continue
+<button type="button" name="save"  class="accountbutton">
+            {{buttonLabel}}
         </button>
 </template>
 

@@ -8,7 +8,7 @@
       </p>
     </div>
     <div class="inputfield">
-      <LoginInput   :password='password'/>
+      <LoginInput :password='password'/>
       <div>
       </div>
     </div>
@@ -18,11 +18,11 @@
     <div class="radiobutton">
 
       <div class="radiobuttonlabel">
-        <div><input type="radio" name="radio" :value="false" v-model="websiteAccept" /></div>
+        <div><CommonInputField type="radio" name="radio" :value="false" v-model="websiteAccept" /></div>
         <label>No</label>
       </div>
       <div class="radiobuttonlabelno">
-        <div class="radiobuttonlabel"><input type="radio" name="radio" :value="true" v-model="websiteAccept" />
+        <div class="radiobuttonlabel"><CommonInputField type="radio" name="radio" :value="true" v-model="websiteAccept" />
           <label>Yes</label>
         </div>
 
@@ -39,21 +39,26 @@
     </div>
 
     <div>
-    <Button v-on:click.native="Redirect()" />
+      <Button v-on:click.native="Redirect()">{{buttonLabel="Continue"}}</Button>
     </div>
   </div>
 </template>
   
 <script>
 
-// import Button from './components/atoms/Button.vue';
-import Button from '../atoms/Button.vue';
-import LoginInput from '../molecules/LoginInput.vue';
+
+
+
+
+import LoginInput from "../molecules/LoginInput.vue";
+import Button from "../atoms/Button.vue";
+import CommonInputField from "../atoms/CommonInputField.vue";
 
 export default {
   components: {
     LoginInput,
     Button,
+    CommonInputField
 },
   data() {
     return {

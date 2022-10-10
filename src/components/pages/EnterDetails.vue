@@ -17,9 +17,8 @@
         </div>
       </div>
       <div>
-        <input
-          type="text"
-          name="number"
+        <CommonInputField
+          Value="number"
           class="input-container"
           placeholder="Start Typing your Adress Here"
         />
@@ -28,32 +27,32 @@
         <p>Enter address manually</p>
       </div>
       <div>
-        <input
-          type="text"
+        <CommonInputField
+        Value="text"
           name="number"
           class="input-container"
           placeholder="Adress Line 1"
         />
       </div>
       <div>
-        <input
-          type="text"
+        <CommonInputField
+        Value="text"
           name="number"
           class="input-container"
           placeholder="Town/City"
         />
       </div>
       <div>
-        <input
-          type="text"
+        <CommonInputField
+        Value="text"
           name="number"
           class="input-container"
           placeholder="Country(optional)"
         />
       </div>
       <div>
-        <input
-          type="text"
+        <CommonInputField
+        Value="text"
           name="number"
           class="input-container"
           placeholder="Post Code"
@@ -65,24 +64,24 @@
     <div class="birthdetails" >
       
       <div >
-        <input
-          type="text"
+        <CommonInputField
+        Value="text"
           name="number"
           class="input-container"
           placeholder="DD"
         />
       </div>
       <div>
-        <input
-          type="text"
+        <CommonInputField
+         Value="text"
           name="number"
           class="input-container"
           placeholder="MM"
         />
       </div>
       <div>
-        <input
-          type="text"
+        <CommonInputField
+          Value="text"
           name="number"
           class="input-container"
           placeholder="YYYY"
@@ -122,6 +121,7 @@
    import Vue from "vue";
    import VueCountryCode from "vue-country-code-select";
    import { ModelSelect } from 'vue-search-select'
+import CommonInputField from "../atoms/CommonInputField.vue";
    
 
 
@@ -150,9 +150,10 @@ Vue.use(VueCountryCode);
             this.$router.push({name:'SetPreference'})
         }
     },
-    components: { 
-      ModelSelect 
-    }
+    components: {
+    ModelSelect,
+    CommonInputField
+}
 };
 </script>
 

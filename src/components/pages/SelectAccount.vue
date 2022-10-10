@@ -52,7 +52,7 @@
 
        
 
-        <Button  v-on:click.native="goToHome()"/>
+        <Button  v-on:click.native="goToHome()">Continue</Button>
 
 
 
@@ -61,7 +61,7 @@
 
 
 <script>
-import Button from '../atoms/Button.vue';
+import Button from "../atoms/Button.vue";
 export default {
     name: 'SelectAccount',
     components:{
@@ -69,6 +69,7 @@ export default {
 },
     data(){
      return{
+        buttonLabel:'',
         showborder: false,
         showborderone: false,
         showbordertwo: false
@@ -156,15 +157,5 @@ export default {
     background-size: 28px !important;
     font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
-
 
 </style>
