@@ -1,4 +1,6 @@
 <script>
+import '../styles/subcomponents/passwordvalidation.css'
+
 export default {
     name: "PasswordValidation",
    
@@ -22,7 +24,7 @@ export default {
 
 
 <template>
-    <div>
+    
    <div class="passwordvalidationdiv">
           <p>Your password must contain:</p>
           <div class="passwordvalidation">
@@ -48,30 +50,8 @@ export default {
             </div>
           </div>
         </div>
-        </div>
+        
 </template>
 
 
 
-<style>
-    
-.passwordvalidationdiv {
-  margin-left: 18px;
-}
-
-.passwordvalidationdiv p {
-  font-family: 'Circular-Medium,Arial,Helvetica,sans-serif';
-  margin-bottom: 10px;
-}
-
-.faiccons {
-  color: #00aa5e !important;
-  border: 1px solid #00aa5e;
-  border-radius: 50%;
-  padding: 0.5px;
-  font-weight: 100;
-  background-color: #ffffff;
-}
-
-
-</style>

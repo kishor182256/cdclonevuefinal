@@ -1,5 +1,7 @@
 
 <script>
+import '../styles/header.css'
+
     export default {
       name: "Header",
     }
@@ -75,87 +77,4 @@
     
     
     
-    <style>
-    .header {
-      background-color: #ffffff;
-      height: 60px;
-    }
-    
-    .subheader {
-      display: flex;
-      justify-content: space-between;
-      height: 60px;
-      align-items: center;
-    
-    
-    }
-    
-    .subheadercontent {
-      margin: 40px;
-    }
-    
-    .subheadercontent img {
-      height:52px;
-      width: 160px;
-    }
-    
-    .subheadercontent2 {
-      width: max-content !important;
-      height: 15px !important;
-      display: flex;
-      align-items: center !important;
-    }
-    
-    .subheadercontentstep p {
-      margin: 10px;
-    }
-    
-    .crossicon {
-      color: gray !important;
-      font-size: 20px;
-      font-weight: 100;
-    }
-    
-    .subheadercontentstep {
-      display: flex;
-      justify-content: space-between !important;
-      align-items: center !important;
-      max-width: 400px;
-      margin: 10px;
-    }
-    
-    .subheadercontentstep p{
-      margin-right: 10px;
-    }
-    
-    .divider {
-      color: gray !important;
-    }
-    
-    .stepper{
-      max-width: 200px;
-      display: flex !important;
-      /* margin-right: 800px */
-      justify-content: center;
-    }
-    
-     .number{
-      height: 25px;
-      width: 25px;
-      background-color: #bbb;
-      border-radius: 50%;
-       display: flex;
-      justify-content: center !important;
-      align-items: center !important;
-      color:#ffffff !important;
-      font: 5px;
-      font-weight: bold;
-     }
-    
-     .step p{
-       display: flex;
-       font-family: Circular-Book,Arial,Helvetica,sans-serif; 
-       color:#0a0a0a;
-       font-weight: 200;
-     } 
-    </style>
+   

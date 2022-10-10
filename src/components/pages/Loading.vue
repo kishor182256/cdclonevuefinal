@@ -31,6 +31,7 @@
 
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import '../styles/Loader.css'
 
 Vue.use(Vuetify)
     export default{
@@ -60,59 +61,3 @@ Vue.use(Vuetify)
 </script>
 
 
-<style>
-  .main{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-
-  .circular{
-    background-color: #f2f2f2 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center!important;
-  }
-
-  .circularcontent{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-  }
-
-  .circularcontenttext{
-    max-width: 95px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 30px;
-  }
-
-  .circularcontenttext p{
-    color:#003060 !important;
-    font-size: 22px !important;
-    font-family:'Circular-Book,Arial,Helvetica,sans-serif';
-    margin: -5px;
-  }
-
-  .progressvalue{
-    color:#0b5fff
-  }
-
-  .footertext{
-    display: flex;
-    flex-direction: column;
-    align-items: center !important;
-    justify-content: center !important;
-    margin-left: 450px;
-    margin-top: 20px;
-    color: #6f6f6f !important;
-  }
-  .footertext p{
-    color: #6f6f6f !important;
-    font-Size:22px;
-    font-family:'Circular-Book,Arial,Helvetica,sans-serif';
-    font-weight: 300;
-    margin: -3px;
-  }
-</style>

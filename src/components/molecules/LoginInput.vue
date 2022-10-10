@@ -1,6 +1,8 @@
 <script>
 import PasswordValidation from "./PasswordValidation.vue";
 import CommonInputField from "../atoms/CommonInputField.vue";
+import '../styles/subcomponents/LoginInput.css'
+
 export default {
     name: "LoginInput",
    
@@ -60,25 +62,3 @@ export default {
 </template>
   
   
-<style>
-
-.inputfield {
-  padding: 10px;
-}
-
-.inputfield input {
-  width: 400px;
-  padding: 20px;
-  border: 1px solid rgb(233, 233, 233);
-  border-radius: 5px;
-  margin: 15px;
-}
-
-.inputfield input::placeholder {
-  font-family: Circular-Book, Arial, Helvetica, sans-serif;
-  color: #626262;
-  font-size: 14px;
-  font-weight: 400 !important;
-}
-
-</style>

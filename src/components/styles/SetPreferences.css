@@ -1,0 +1,87 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+    flex-direction: column;
+    margin-bottom: 200px !important;
+} 
+
+.subpartheading {
+    font-family: Circular-Book,Arial,Helvetica,sans-serif !important;
+    font-size: 32px;
+    margin-left: -5px !important;
+
+}
+
+.amountselecttext {
+
+    margin-top: 20px;
+    margin-right: 180px;
+    margin-left: 20px;
+}
+
+.countryselectheading {
+    display: flex;
+    justify-content: flex-start !important;
+    margin-right: 320px;
+    margin-top: 5px;
+}
+
+
+
+
+
+.input-container {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    margin: 15px;
+    width: 80%;
+}
+
+
+.userdetailsselect {
+    width: 50%;
+    height: 50px;
+    margin: 3px;
+
+}
+
+.userdetailsselect2 {
+    height: 50px;
+    width: 250% !important;
+
+
+}
+
+.userdetails {
+    display: flex;
+    width: 450px;
+    margin-left: 23px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+
+    width: 480px;
+    margin-left: 35px;
+
+}
+
+.checkbox p {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.amountselect{
+    width: 180px;
+    margin-right: 250px;
+    margin-top: 10px;
+}
+
+.subpart {
+    margin-right: 50px;
+}
