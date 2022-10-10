@@ -8,8 +8,33 @@
       </p>
     </div>
     <div class="inputfield">
-      <LoginInput :password='password'/>
+      <LoginInput :password='password' />
       <div>
+        <div class="passwordvalidationdiv">
+          <p>Your password must contain:</p>
+          <div class="passwordvalidation">
+            <div class="circle">
+              <i class="fa fa-genderless faiccon"  v-if=!password.match(/.{8,}/)> </i>
+              <i class="fa fa-check faiccons" v-if=password.match(/.{8,}/)> </i>
+              <p class="passwordvalidationlable">at least 8 characters</p>
+            </div>
+            <div class="circle">
+              <i class="fa fa-genderless faiccon" v-if=!password.match(/[0-9]/)></i>
+              <i class="fa fa-check faiccons" v-if=password.match(/[0-9]/)></i>
+              <p class="passwordvalidationlable">at least 1 number</p>
+            </div>
+            <div class="circle">
+              <i class="fa fa-genderless faiccon" v-if=!password.match(/[a-z]/)></i>
+              <i class="fa fa-check faiccons" v-if=password.match(/[a-z]/)></i>
+              <p class="passwordvalidationlable">a lower case character</p>
+            </div>
+            <div class="circle">
+              <i class="fa fa-genderless faiccon" v-if=!password.match(/[A-Z]/)></i>
+              <i class="fa fa-check faiccons" v-if=password.match(/[A-Z]/)></i>
+              <p class="passwordvalidationlable">a upper case character</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="referheadingdiv">
@@ -39,7 +64,7 @@
     </div>
 
     <div>
-      <Button v-on:click.native="Redirect()">{{buttonLabel="Continue"}}</Button>
+      <Button v-on:click.native="Redirect()" buttonLabel="Continue"></Button>
     </div>
   </div>
 </template>
@@ -52,14 +77,16 @@
 
 import LoginInput from "../molecules/LoginInput.vue";
 import Button from "../atoms/Button.vue";
-// import CommonInputField from "../atoms/CommonInputField.vue";
+// import PasswordValidation from "../molecules/PasswordValidation.vue";
+
 import '../styles/CreateLogin.css'
+import '../styles/subcomponents/passwordvalidation.css'
 
 export default {
   components: {
     LoginInput,
     Button,
-    // CommonInputField
+    // PasswordValidation
 },
   data() {
     return {
@@ -69,18 +96,13 @@ export default {
 
   },
 
-  
+
   methods: {
-    
+
     Redirect() {
       console.log('redirectTo',);
       this.$router.push({ name: 'SetSecurity' })
     },
-
-
-
-
-
 
   },
 };

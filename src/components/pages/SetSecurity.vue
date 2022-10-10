@@ -33,7 +33,10 @@
 
     <div>
       
-      <Button  v-on:click.native="Redirect()"/>
+      <Button 
+        
+        v-on:click.native="Redirect()"
+        buttonLabel='Confirm my mobile'/>
     </div>
   </div>
 </template>

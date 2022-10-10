@@ -2,7 +2,10 @@
     export default {
        name:"Button",
        props: {
-         buttonLabel: String
+         buttonLabel: {
+            type: String,
+            default: "Continue",
+         }
        },
     }
 </script>

@@ -1,12 +1,18 @@
 <script>
+
 import '../styles/subcomponents/passwordvalidation.css'
 
 export default {
     name: "PasswordValidation",
-   
+    // data(){
+    //   return {
+    //     password:''
+    //   }
+    // },
       props: {
-        password:String
-   },
+          password:String,
+        },
+   
 
    created() {
     console.log('vchvchvchgd',this.password)
@@ -52,6 +58,5 @@ export default {
         </div>
         
 </template>
-
 
 

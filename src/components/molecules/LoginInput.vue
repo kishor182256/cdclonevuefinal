@@ -1,5 +1,5 @@
 <script>
-import PasswordValidation from "./PasswordValidation.vue";
+// import PasswordValidation from "./PasswordValidation.vue";
 import InputField from "../atoms/InputField.vue";
 import '../styles/subcomponents/LoginInput.css'
 
@@ -9,10 +9,12 @@ export default {
     data() {
         return {
             showPassword: false,
-            password:'',
+         
 
             props: {
-                // password: String,
+               password: {
+                type:String,
+               }
             },
         };
     },
@@ -25,8 +27,11 @@ export default {
         toggleShow() {
             this.showPassword = !this.showPassword;
         },
+        change() {
+            console.log("change",this.password);
+        }
     },
-    components: { PasswordValidation, InputField }
+    components: {  InputField }
 }
 </script>
   
@@ -46,9 +51,16 @@ export default {
             </div>
 
             <div class="fontpassword">
-                <InputField v-if="showPassword" Value="text" class="input" v-model="password" placeholder="Password" />
+                <InputField v-if="showPassword"
+                 Value="text" class="input"
+            
+                  v-model="password" placeholder="Password" />
 
-                <InputField v-else Value="password" class="input" v-model="password" placeholder="Password" />
+                <InputField 
+                 v-else Value="password" 
+                 @change="change"
+                 class="input" v-model="password"
+                  placeholder="Password" />
 
                 <i @click="toggleShow" class="fas fontpassword"
                     :class="{ 'fa-eye-slash': showPassword, 'fa-eye': !showPassword }"></i>
@@ -56,7 +68,7 @@ export default {
 
         </div>
 
-        <PasswordValidation :password='password'/>
+        <!-- <PasswordValidation :password='password'/> -->
 
     </div>
 </template>

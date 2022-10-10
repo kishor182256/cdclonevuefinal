@@ -13,12 +13,18 @@
     props: {
         placeholder: {
         type: String,
-        default: ''
+        default: '',
+        
       },
       Value: {
         type: [String, Number],
         default: ''
+      },
+      password:{
+        type: String
       }
+
+
     },
   
   }
